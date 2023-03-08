@@ -26,11 +26,34 @@
         <h1>Obecnosc</h1>
     </header>
     <main>
-    <?php
-    for($i=0;$i<count($imie);$i++){
-        echo
-    }
-    ?>
+        <form method="post">
+        <table>
+            <thread>
+                    <tr>
+                        <th>Lp.</th>
+                        <th>Imię i nazwisko</th>
+                        <th>Czy jest obecny</th>
+                    </tr>
+            </thread>
+            <tbody>
+            <?php
+            for($i=0;$i<count($imie);$i++){
+                echo "<tr>";
+                echo "<th>$idosoba[$i]</th>";
+                echo "<td>$imie[$i] $nazwisko[$i]</td>";
+                echo "<td><input type='checkbox' name='obecny' id='obecny$idosoba[$i]'></td>";
+                echo "</tr>";
+            }
+            ?>
+            </tbody>
+        </table>
+        <input type="submit" value="Zapisz obecność">
+        </form>
+
+
+
+
+        
 </main>
 <footer>
     Strone wykonał Aleksander
